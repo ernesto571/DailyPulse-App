@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_BASE = "http://localhost:5001/api/news"; // 👈 your backend URL
+const API_BASE = import.meta.env.MODE === "development" 
+  ? "http://localhost:5001/api/news" 
+  : "https://dailypulse-f8ra.onrender.com/api/news" // 👈 your backend URL
 
 // Business News
 export const getBusinessNews = async () => {
