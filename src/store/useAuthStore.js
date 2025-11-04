@@ -2,8 +2,8 @@ import { create } from "zustand";
 import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 
-// ✅ FIXED: Remove /api from BASE_URL since axiosInstance already handles it
-const BASE_URL = "https://dailypulse-f8ra.onrender.com"
+
+const BASE_URL = "https://dailypulse-f8ra.onrender.com" || "http://localhost:5001";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
