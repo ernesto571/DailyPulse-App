@@ -3,7 +3,7 @@ import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 
 
-const BASE_URL = "https://dailypulse-f8ra.onrender.com" || "http://localhost:5001";
+const BASE_URL = "http://localhost:5001";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
@@ -62,7 +62,7 @@ export const useAuthStore = create((set, get) => ({
 
   // ✅ FIXED Google Sign In
   googleSignIn: () => {
-    // console.log("🔗 Redirecting to Google OAuth");
+    console.log("🔗 Redirecting to Google OAuth");
     // Use the correct full URL that you tested
     const oauthUrl = `${BASE_URL}/api/auth/google`;
     console.log("Redirect URL:", oauthUrl);
@@ -98,7 +98,7 @@ export const useAuthStore = create((set, get) => ({
         toast.success("Logged in with Google successfully!");
         return true;
       } catch (finalError) {
-        // console.log("Final auth check failed:", finalError);
+        console.log("Final auth check failed:", finalError);
         toast.error("Failed to complete Google sign in");
         return false;
       }
