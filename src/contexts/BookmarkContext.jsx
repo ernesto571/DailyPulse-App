@@ -45,7 +45,7 @@ export const BookmarkProvider = ({children}) => {
         } catch (error) {
             toast.dismiss(loadingToast);
             setBookmarks(prev => prev.filter(b => b._id !== tempBookmark._id));
-            toast.error("Failed to add bookmark");
+            toast.error("Failed to add bookmark. Please, make sure you are logged in.");
         }
     };
 

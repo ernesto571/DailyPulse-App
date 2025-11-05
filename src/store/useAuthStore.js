@@ -3,7 +3,7 @@ import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 
 
-const BASE_URL = "https://dailypulse-f8ra.onrender.com" || "http://localhost:5001";
+const BASE_URL =  "http://localhost:5001"
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
@@ -99,7 +99,7 @@ export const useAuthStore = create((set, get) => ({
         return true;
       } catch (finalError) {
         console.log("Final auth check failed:", finalError);
-        toast.error("Failed to complete Google sign in");
+        toast.error("Failed to complete Google sign in" , finalError);
         return false;
       }
       

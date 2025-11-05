@@ -23,6 +23,7 @@ function LoginPage() {
 
     // Call login function from store
     await login(formData);
+    navigate("/")
     
     // Check if user is authenticated after login attempt
     if (authUser) {
@@ -83,7 +84,7 @@ function LoginPage() {
         </section>
 
         {/* Right Side - Registration Form */}
-        <section className="grid grid-cols-1 justify-center bg-white px-8 max-h-[85%] mt-[10%] w-[70%] ml-[15%] rounded-[20px]">
+        <section className="grid grid-cols-1 justify-center bg-white px-8 max-h-[75%] mt-[10%] w-[70%] ml-[15%] rounded-[20px]">
           <div className="max-w-md w-full">
             <h1 className="text-[1.5rem] text-center  font-bold text-gray-800 my-6 ">Sign In</h1>
 

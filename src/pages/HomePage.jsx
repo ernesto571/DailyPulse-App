@@ -658,7 +658,7 @@ function HomePage() {
           </div>
 
           {/* Arts category */}
-          <div className="border-solid border-t-[3px] hidden lg:flex border-gray-900">
+          <div className="border-solid border-t-[3px] hidden lg:grid border-gray-900">
             <Link to='/arts' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> ARTS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
             {/* top */}
             {artNews.slice(0, 1).map((article, index) => (
