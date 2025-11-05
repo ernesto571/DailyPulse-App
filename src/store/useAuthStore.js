@@ -3,7 +3,10 @@ import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 
 
-const BASE_URL =  "https://dailypulse-f8ra.onrender.com" || "http://localhost:5001"
+const BASE_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5001"
+    : "https://dailypulse-f8ra.onrender.com";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
@@ -53,6 +56,7 @@ export const useAuthStore = create((set, get) => ({
   logout: async () => {
     try {
       await axiosInstance.post("/auth/logout");
+      axiosInstance.defaults.headers.common["Authorization"] = "";
       set({ authUser: null });
       toast.success("Logged out successfully");
     } catch (error) {
@@ -60,7 +64,7 @@ export const useAuthStore = create((set, get) => ({
     }
   },
 
-  // ✅ FIXED Google Sign In
+  //  Google Sign In
   googleSignIn: () => {
     console.log("🔗 Redirecting to Google OAuth");
     // Use the correct full URL that you tested
@@ -69,7 +73,7 @@ export const useAuthStore = create((set, get) => ({
     window.location.href = oauthUrl;
   },
 
-  // ✅ IMPROVED Handle OAuth success
+  //  Handle OAuth success
   handleOAuthSuccess: async (token) => {
     try {
       console.log("🔄 Processing OAuth callback...");
