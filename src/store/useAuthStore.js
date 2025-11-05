@@ -3,7 +3,7 @@ import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 
 
-const BASE_URL =  "http://localhost:5001" ||  "https://dailypulse-f8ra.onrender.com/api"
+const BASE_URL =  "https://dailypulse-f8ra.onrender.com/api" || "http://localhost:5001"
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
