@@ -29,9 +29,9 @@ function NavBar() {
   };
 
   return (
-    <div className="mb-[63px]">
+    <div className="mb-[62px]">
       {/* Navbar Top Section */}
-      <div className="fixed top-0 z-50 w-full border-2 border-gray-200 bg-white">
+      <div className="fixed top-0 z-50 w-full border-[1px] border-gray-200 bg-white">
         <div className="flex items-center justify-between w-[96%] mx-auto py-2">
           {/* Logo + Hamburger */}
           <span className="flex items-center">
@@ -82,7 +82,7 @@ function NavBar() {
           {/* Auth Buttons */}
           {!authUser ? (
             <div className="flex gap-5">
-              <button className="py-2 px-7 border-2 border-gray-400 font-bold text-[1.1rem] text-gray-600 rounded-[8px] hover:text-gray-800 hover:border-gray-600"  onClick={()=> {navigate('/login')}}>
+              <button className="py-2 px-7 border-[1px] border-gray-400 font-bold text-[1.1rem] text-gray-600 rounded-[8px] hover:text-gray-800 hover:border-gray-600"  onClick={()=> {navigate('/login')}}>
                 Sign In
               </button>
               <button className="py-2 px-7 font-bold text-[1.1rem] text-white bg-black rounded-[8px] hover:bg-gray-700" onClick={()=> {navigate('/register')}}>
@@ -93,7 +93,7 @@ function NavBar() {
             <div className="flex items-center gap-5">
               <NavLink
                 to="/bookmarks"
-                className="py-2 px-7 border-2 border-gray-400 font-bold text-[1.1rem] text-gray-600 rounded-[8px] hover:text-gray-800 hover:border-gray-600">
+                className="py-2 px-7 border-[1px] border-gray-400 font-bold text-[1.1rem] text-gray-600 rounded-[8px] hover:text-gray-800 hover:border-gray-600">
                 Bookmarks
               </NavLink>
               <button
@@ -149,7 +149,7 @@ function NavBar() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative text-[1.2rem] transition-all border-b-2 border-gray-300 px-4 pt-3 pb-4 items-center ${
+                  `relative text-[1.1rem] transition-all border-b-[1px] border-gray-300 px-4 pt-3 pb-4 items-center ${
                     isActive
                       ? "text-red-600 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-red-600"
                       : "hover:text-red-600"

@@ -54,15 +54,15 @@ function BookmarkPage() {
   }
 
   return (
-    <div className="max-h-screen mt-20">
+    <div className="max-h-screen mt-15">
       <div className="w-[94%] lg:w-[94%] mx-auto">
-        <h1 className="text-[2rem] font-bold text-gray-700 py-5">MY BOOKMARKS</h1>
+        <h1 className="text-[1.5rem] font-bold text-gray-700 py-4">MY BOOKMARKS</h1>
 
-        <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-10 border-solid border-t-[3px] border-black">
+        <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-10 border-solid border-t-[2px] border-black">
           {/* left side */}
           <div className="col-span-1 flex flex-col gap-3">
             {bookmarks.slice(0, 2).map((bookmark, index) => (
-              <div key={index} className="overflow-hidden border-solid border-b-2 border-gray-200 mt-8 relative">
+              <div key={index} className="overflow-hidden border-solid border-b-[1px] border-gray-200 mt-8 relative">
                 <img 
                   src={bookmark.urlToImage} 
                   alt={bookmark.title} 
@@ -112,7 +112,7 @@ function BookmarkPage() {
                   <BookmarkIcon className="w-5 h-5 text-white fill-red-600" />
                 </button>
                 <h3
-                  className="font-bold text-[1.8rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.6rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(bookmark.url, "_blank")}>
                   {bookmark.title}
                 </h3>
@@ -126,7 +126,7 @@ function BookmarkPage() {
           {/* right side- dont show for medium screen */}
           <div className="col-span-1 hidden lg:flex flex-col gap-3">
             {bookmarks.slice(3, 5).map((bookmark, index) => (
-              <div key={index} className="overflow-hidden mt-8 border-solid border-b-2 border-gray-200 relative">
+              <div key={index} className="overflow-hidden mt-8 border-solid border-b-[1px] border-gray-200 relative">
                 <img 
                   src={bookmark.urlToImage} 
                   alt={bookmark.title} 
@@ -163,7 +163,7 @@ function BookmarkPage() {
           <div className="border-solid border-y-[3px] hidden lg:flex border-gray-900 my-8">
             <div className="grid grid-cols-4 gap-7 mt-8 mb-6">
               {bookmarks.slice(5).map((bookmark, index) => (
-                <div key={index} className="overflow-hidden border-solid border-b-2 border-gray-200 relative">
+                <div key={index} className="overflow-hidden border-solid border-b-[1px] border-gray-200 relative">
                   <img 
                     src={bookmark.urlToImage} 
                     alt={bookmark.title} 
@@ -198,7 +198,7 @@ function BookmarkPage() {
           <div className="border-solid lg:hidden border-y-[3px] border-gray-900 my-8">
             <div className="grid grid-cols-2 gap-7 mt-8 mb-6">
               {bookmarks.slice(3).map((bookmark, index) => (
-                <div key={index} className="overflow-hidden border-solid border-b-2 border-gray-200 relative">
+                <div key={index} className="overflow-hidden border-solid border-b-[1px] border-gray-200 relative">
                   <img 
                     src={bookmark.urlToImage} 
                     alt={bookmark.title} 

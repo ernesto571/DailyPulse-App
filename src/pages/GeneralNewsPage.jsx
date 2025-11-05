@@ -6,7 +6,7 @@ function GeneralNews() {
     return(
         <div>
             <ArticleCard 
-            title="GENARAL NEWS"
+            title="GENERAL NEWS"
             getCategoryNews={getGeneralNews}
             start={6}
             />

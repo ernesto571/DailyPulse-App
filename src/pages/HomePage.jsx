@@ -214,15 +214,15 @@ function HomePage() {
   }
 
   return (
-    <div className="max-h-screen mt-[6rem]">
+    <div className="max-h-screen mt-[5rem]">
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-[94%] mx-auto ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-[98%] lg:w-[94%] mx-auto ">
         {/* Left side - Main article (spans 2 columns) */}
         <div className="md:col-span-1 lg:col-span-2">
           {topHeadline.slice(0, 1).map((article, index) => (
             <div key={index} className="overflow-hidden">
               <h3
-                className="font-bold text-[1.3rem]  lg:text-[2rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                className="font-bold text-[1.2rem]  lg:text-[1.7rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
                 onClick={() => window.open(article.url, "_blank")}>
                 {article.title}
               </h3>
@@ -250,7 +250,7 @@ function HomePage() {
           {topHeadline.slice(1, 6).map((article, index) => (
             <div
               key={index}
-              className="overflow-hidden pb-4 border-solid border-b-2 border-gray-200">
+              className="overflow-hidden pb-4 border-solid border-b-[1px] border-gray-200">
               <h3
                 className="font-bold text-[1.1rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
                 onClick={() => window.open(article.url, "_blank")}>
@@ -265,8 +265,8 @@ function HomePage() {
       </div>
 
       {/* more top stories */}
-      <div className="border-solid border-t-2 border-gray-900 w-[94%] mx-auto mt-10">
-        <h1 className="my-5 text-gray-900 text-[1.3rem] font-bold">More Top Stories</h1>
+      <div className="border-solid border-t-[1px] border-gray-900 w-[94%] mx-auto mt-10">
+        <h1 className="my-5 text-gray-900 text-[1.2rem] font-bold">More Top Stories</h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-9">
           {topHeadline.slice(6, 10).map((article, index) => (
             <div key={index} className="overflow-hidden pb-4 relative">
@@ -284,8 +284,8 @@ function HomePage() {
       </div>
 
       {/* only from DailyPulse */}
-      <div className="border-solid border-t-2 border-gray-900 w-[94%] mx-auto mt-5">
-        <h1 className="my-5 text-gray-900 text-[1.3rem] font-bold">Only From DailyPulse</h1>
+      <div className="border-solid border-t-[1px] border-gray-900 w-[94%] mx-auto mt-5">
+        <h1 className="my-5 text-gray-900 text-[1.2rem] font-bold">Only From DailyPulse</h1>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-9">
           {DailyPulse.slice(0, 3).map((article, index) => (
             <div key={index} className="overflow-hidden pb-4 relative">
@@ -306,13 +306,13 @@ function HomePage() {
       <div className="bg-black mt-5">
         <div className="w-[94%] mx-auto">
           <br />
-          <h1 className="text-white text-[1.3rem] font-bold border-solid border-t-[3px] pt-5 pb-6 border-white">More News</h1>
+          <h1 className="text-white text-[1.2rem] font-bold border-solid border-t-[2px] pt-5 pb-6 border-white">More News</h1>
           <div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
             {/* left side */}
             <div className="col-span-1">
               {general.slice(0, 1).map((article, index) => (
-                <div key={index} className="overflow-hidden  lg:mt-10 border-solid border-b-2 border-white">
-                  <h3 className="font-bold text-[1.4rem] my-2 hover:underline hover:cursor-pointer text-white" onClick={() => window.open(article.url, "_blank")} >
+                <div key={index} className="overflow-hidden  lg:mt-10 border-solid border-b-[1px] border-white">
+                  <h3 className="font-bold text-[1.2rem] my-2 hover:underline hover:cursor-pointer text-white" onClick={() => window.open(article.url, "_blank")} >
                     {article.title}
                   </h3>
                   <p className="text-gray-400 text-[0.9rem] mb-1">
@@ -338,7 +338,7 @@ function HomePage() {
             {/* Right side */}
             <div className="col-span-1 hidden lg:flex">
               {general.slice(1, 2).map((article, index) => (
-                <div key={index} className="overflow-hidden border-solid border-b-2 border-white relative">
+                <div key={index} className="overflow-hidden border-solid border-b-[1px] border-white relative">
                   <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] object-cover hover:opacity-85 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                   <BookmarkButton article={article} />
                   <h3
@@ -375,11 +375,11 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="border-solid border-t-2 border-gray-900 mt-10">
+      <div className="border-solid border-t-[1px] border-gray-900 mt-10">
         
         {/* world of business */}
-        <div className="border-solid border-t-[3px] border-gray-900 mt-14 w-[94%] mx-auto">
-          <Link to='/business' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline">WORLD OF BUSINESS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+        <div className="border-solid border-t-[2px] border-gray-900 mt-14 w-[94%] mx-auto">
+          <Link to='/business' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline">WORLD OF BUSINESS  <ChevronRight size={25} className=" mt-[2px]"/></Link>
 
           <div className="grid grid-cols-3 gap-8 mt-8 lg:mt-5">
             {/* left side */}
@@ -394,9 +394,9 @@ function HomePage() {
             {/* right side */}
             <div className="col-span-1">
               {business.slice(0, 1).map((article, index) => (
-                <div key={index} className="mt-2 lg:mt-[7rem] overflow-hidden">                    
+                <div key={index} className="mt-2 lg:mt-7 overflow-hidden">                    
                   <h3
-                    className="font-bold text-[1.3rem]  lg:text-[2rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                    className="font-bold text-[1.2rem]  lg:text-[1.7rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
                     onClick={() => window.open(article.url, "_blank")}>
                     {article.title}
                   </h3>
@@ -410,8 +410,8 @@ function HomePage() {
         </div>
 
         {/* Health and wellness */}
-        <div className="border-solid border-t-[3px] border-gray-900 mt-14 w-[94%] mx-auto">
-          <h1 className="mt-3 text-[1.4rem] font-bold text-gray-900">HEALTH AND WELLNESS</h1>
+        <div className="border-solid border-t-[2px] border-gray-900 mt-14 w-[94%] mx-auto">
+          <h1 className="mt-3 text-[1.2rem] font-bold text-gray-900">HEALTH AND WELLNESS</h1>
 
           <div className="grid grid-cols-3 gap-9 mt-7">
             {health.slice(0, 3).map((article, index) => (
@@ -432,8 +432,8 @@ function HomePage() {
         </div>
 
         {/* World of cryptocurrency */}
-        <div className="border-solid border-t-[3px] border-gray-900 mt-14 w-[94%] mx-auto">
-          <Link to='/crypto' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline">WORLD OF CRYPTOCURRENCY  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+        <div className="border-solid border-t-[2px] border-gray-900 mt-14 w-[94%] mx-auto">
+          <Link to='/crypto' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline">WORLD OF CRYPTOCURRENCY  <ChevronRight size={25} className=" mt-[2px]"/></Link>
 
           <div className="grid grid-cols-3 gap-10 mt-8 lg:mt-5">
             {/* LEFT SIDE */}
@@ -441,7 +441,7 @@ function HomePage() {
               {crypto.slice(0, 1).map((article, index) => (
                 <div key={index} className="overflow-hidden mt-2 lg:mt-10">
                   <h3
-                    className="font-bold text-[1.3rem]  lg:text-[2rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                    className="font-bold text-[1.2rem]  lg:text-[1.7rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
                     onClick={() => window.open(article.url, "_blank")}>
                     {article.title}
                   </h3>
@@ -466,18 +466,18 @@ function HomePage() {
       </div>
 
       {/* category list 1*/}
-      <div className="border-solid border-t-2 border-gray-900 mt-[2.8rem]">
+      <div className="border-solid border-t-[1px] border-gray-900 mt-[2.8rem]">
         <div className="grid grid-cols-2 lg:grid-cols-3 mt-10 w-[94%] mx-auto gap-8">
           {/* Business category */}
-          <div className="border-solid border-t-[3px] border-gray-900">
-            <Link to='/business' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> BUSINESS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900">
+            <Link to='/business' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> BUSINESS  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {business.slice(1, 2).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -488,9 +488,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {business.slice(2, 5).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -499,15 +499,15 @@ function HomePage() {
           </div>
 
           {/* Health category */}
-          <div className="border-solid border-t-[3px] border-gray-900">
-            <Link to='/health' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> HEALTH  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900">
+            <Link to='/health' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> HEALTH  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {health.slice(3, 4).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -518,9 +518,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {health.slice(4, 7).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -529,15 +529,15 @@ function HomePage() {
           </div>
 
           {/* Tech category */}
-          <div className="border-solid border-t-[3px] border-gray-900">
-            <Link to='/technology' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> TECH  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900">
+            <Link to='/technology' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> TECH  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {techNews.slice(0, 1).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -548,9 +548,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {techNews.slice(1, 4).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -559,15 +559,15 @@ function HomePage() {
           </div>
 
           {/* Arts category shown only in middle screen */}
-          <div className="border-solid border-t-[3px] border-gray-900 lg:hidden ">
-            <Link to='/arts' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> ARTS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900 lg:hidden ">
+            <Link to='/arts' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> ARTS  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {artNews.slice(0, 1).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -578,9 +578,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {artNews.slice(1, 4).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -590,10 +590,10 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="border-solid border-t-2 border-gray-900 mt-[2.8rem]">
+      <div className="border-solid border-t-[1px] border-gray-900 mt-[2.8rem]">
         {/* world of sports */}
-        <div className="border-solid border-t-[3px] border-gray-900 mt-14 w-[94%] mx-auto">
-          <Link to='/sports' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline">WORLD OF SPORTS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+        <div className="border-solid border-t-[2px] border-gray-900 mt-14 w-[94%] mx-auto">
+          <Link to='/sports' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline">WORLD OF SPORTS  <ChevronRight size={25} className=" mt-[2px]"/></Link>
 
           <div className="grid grid-cols-3 gap-8 mt-8 lg:mt-5">
             {/* left side */}
@@ -608,9 +608,9 @@ function HomePage() {
             {/* right side */}
             <div className="col-span-1">
               {sport.slice(0, 1).map((article, index) => (
-                <div key={index} className="mt-1 lg:mt-[7rem] overflow-hidden">                    
+                <div key={index} className="mt-1 lg:mt-7 overflow-hidden">                    
                   <h3
-                    className="font-bold text-[1.3rem]  lg:text-[2rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                    className="font-bold text-[1.2rem]  lg:text-[1.7rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
                     onClick={() => window.open(article.url, "_blank")}>
                     {article.title}
                   </h3>
@@ -628,15 +628,15 @@ function HomePage() {
       <div className="border-solid border-y-2 border-gray-900 mt-[2.8rem]">
         <div className="grid grid-cols-2 lg:grid-cols-3 my-10 w-[94%] mx-auto gap-8">
           {/* crypto category */}
-          <div className="border-solid border-t-[3px] border-gray-900">
-            <Link to='/crypto' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> CRYPTO  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900">
+            <Link to='/crypto' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> CRYPTO  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {crypto.slice(1, 2).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -647,9 +647,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {crypto.slice(2, 5).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -658,15 +658,15 @@ function HomePage() {
           </div>
 
           {/* Arts category */}
-          <div className="border-solid border-t-[3px] hidden lg:grid border-gray-900">
-            <Link to='/arts' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> ARTS  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] hidden lg:grid border-gray-900">
+            <Link to='/arts' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> ARTS  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {artNews.slice(0, 1).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -677,9 +677,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {artNews.slice(1, 4).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -688,15 +688,15 @@ function HomePage() {
           </div>
 
           {/* entertainment category */}
-          <div className="border-solid border-t-[3px] border-gray-900">
-            <Link to='/entertainment' className="flex mt-3 text-[1.4rem] font-bold text-gray-900 hover:underline"> ENTERTAINMENT  <ChevronRight size={30} className=" mt-[2px]"/></Link>
+          <div className="border-solid border-t-[2px] border-gray-900">
+            <Link to='/entertainment' className="flex mt-3 text-[1.2rem] font-bold text-gray-900 hover:underline"> ENTERTAINMENT  <ChevronRight size={25} className=" mt-[2px]"/></Link>
             {/* top */}
             {entertainment.slice(0, 1).map((article, index) => (
               <div key={index} className="overflow-hidden mt-4 relative">
                 <img src={article.urlToImage} alt={article.title} className="w-full h-[10rem] lg:h-[13rem] object-cover hover:opacity-90 cursor-pointer" onClick={() => window.open(article.url, "_blank")} />
                 <BookmarkButton article={article} />
                 <h3
-                  className="font-bold text-[1.3rem] mb-2 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>
@@ -707,9 +707,9 @@ function HomePage() {
             ))}
             {/* bottom */}
             {entertainment.slice(1, 4).map((article, index) => (
-              <div key={index} className="overflow-hidden my-3 border-solid border-t-2 border-gray-200">
+              <div key={index} className="overflow-hidden my-3 border-solid border-t-[1px] border-gray-200">
                 <h3
-                  className="font-bold text-[1.2rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
+                  className="font-bold text-[1.1rem] mt-3 hover:underline hover:cursor-pointer text-gray-900"
                   onClick={() => window.open(article.url, "_blank")}>
                   {article.title}
                 </h3>

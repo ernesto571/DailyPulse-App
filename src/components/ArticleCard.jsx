@@ -77,13 +77,13 @@ function ArticleCard({title, getCategoryNews, start}){
     return(
         <div className="max-h-screen">
             <div className="w-[98%] lg:w-[94%] mx-auto">
-                <h1 className="text-[2rem] font-bold text-gray-700 py-5">{title}</h1>
+                <h1 className="text-[1.5rem] font-bold text-gray-700 py-5">{title}</h1>
 
-                <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-10 border-solid border-t-[3px] border-black">
+                <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-10 border-solid border-t-[2px] border-black">
                     {/* left side */}
                     <div className="col-span-1 flex flex-col ">
                         {articles.slice(start, start+2).map((article, index) => (
-                            <div key={index} className="overflow-hidden border-solid border-b-2 border-gray-200 mt-8">
+                            <div key={index} className="overflow-hidden border-solid border-b-[1px] border-gray-200 mt-8">
                                 <div className="relative">
                                     <img 
                                     src={article.urlToImage} 
@@ -121,7 +121,7 @@ function ArticleCard({title, getCategoryNews, start}){
                                     <BookmarkButton article={article} />
                                 </div>                                  
                                 <h3
-                                    className="font-bold text-[1.8rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
+                                    className="font-bold text-[1.6rem] my-2 hover:underline hover:cursor-pointer text-gray-900"
                                     onClick={() => window.open(article.url, "_blank")}>
                                     {article.title}
                                 </h3>
@@ -135,7 +135,7 @@ function ArticleCard({title, getCategoryNews, start}){
                     {/* right side */}
                     <div className="col-span-1 hidden lg:flex flex-col gap-3 ">
                         {articles.slice(start+3, start+5).map((article, index) => (
-                            <div key={index} className="overflow-hidden mt-8 border-solid border-b-2 border-gray-200">
+                            <div key={index} className="overflow-hidden mt-8 border-solid border-b-[1px] border-gray-200">
                                 <div className="relative">
                                     <img 
                                     src={article.urlToImage} 
@@ -165,7 +165,7 @@ function ArticleCard({title, getCategoryNews, start}){
                 <div className=" border-solid border-y-[3px] border-gray-900 my-8">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-7 mt-8 mb-6">
                         {articles.slice(start+5, visibleCount+1 ).map((article, index) => (
-                            <div key={index} className="overflow-hidden border-solid border-b-2 border-gray-200">
+                            <div key={index} className="overflow-hidden border-solid border-b-[1px] border-gray-200">
                                 <div className="relative">
                                     <img 
                                     src={article.urlToImage} 
